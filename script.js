@@ -2,6 +2,11 @@ const inputText = document.querySelector('#todo-name');
 const addTodoBtn = document.querySelector('.todo-button');
 const todoList = document.querySelector('.todo-list');
 
+//Animation for the placeholder
+inputText.addEventListener('focus', (e) => {
+    e.target.previousElementSibling.classList.toggle('focused')
+})
+
 //Event to add the todos to the todolist
 addTodoBtn.addEventListener('click', () => {
     addTodoBtn.style.transform = 'translateY(5px)';
