@@ -44,7 +44,7 @@ body{
 }
 
 .input-group > label{
-    color: var(--dark-colour);
+    color: hsl(0, 0%, 67%);
     position: absolute;
     left: 5px;
     transition: transform 150ms ease-out;

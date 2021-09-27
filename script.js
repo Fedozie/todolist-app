@@ -4,12 +4,13 @@ const todoList = document.querySelector('.todo-list');
 
 //Animation for the placeholder
 inputText.addEventListener('focus', (e) => {
-    e.target.previousElementSibling.classList.add('focused')
+    e.target.previousElementSibling.classList.add('focused');
 })
 
 inputText.addEventListener('blur', (e) => {
-    e.target.previousElementSibling.classList.remove('focused');
-    inputText.value = '';
+    if(inputText.value === ''){
+        e.target.previousElementSibling.classList.remove('focused');
+    }
 })
 
 //Event to add the todos to the todolist
